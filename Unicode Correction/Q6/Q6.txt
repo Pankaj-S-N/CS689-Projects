@@ -1,0 +1,17 @@
+From comparing the ground truths with the tokenizers, we get the following statistics.
+
+Average Precision(best to worst): whitespace(36.98%), unigram_no_limit(13.71%), unigram_2k(8.66%), BPE_2k(5.06%), BPE_1k(2.85%), mbert(2.03%), indicbert(0.68%)
+
+Average Recall(best to worst): whitespace(52.13%), unigram_no_limit(29.12%), unigram_2k(22.84%), BPE_2k(14.32%), BPE_1k(9.32%), mbert(7.18%), indicbert(1.52%)
+
+Average f_score(best to worst): whitespace(42.98), unigram_no_limit(18.52), unigram_2k(12.47), BPE_2k(7.44), BPE_1k(4.35), mbert(3.15), indicbert(0.93)
+
+From this, we can say that though naive, the whitespace tokenizer performs better when trying to encounter word groups. 
+But, it will only perform better when the word groups are closer to length 1.
+So, for complex or more word groups, it will not be that great.
+
+BPE on the other hand, would peform better than the current performance with more vocabulary size and a bigger corpus, as it will cover more and more common terms.
+
+Advanced models like mbert and indicbert, while performing better on other tasks which require smaller tokens. The result for tokenizing word groups is really poor.
+
+All these models, still arent geared toward promoting word groups as tokens.
