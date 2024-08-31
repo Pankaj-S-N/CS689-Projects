@@ -1,0 +1,17 @@
+The translations done by all the models were quite good.
+Its not reflected exactly in the scores, as they use various machine metrics for that.
+But from human perception, I'd give them a better score.
+
+As expected, the models are generally performing better when translating to english.
+It can be attributed to the fact that its the most used and researched on language.
+
+We can see a general pattern here that the INDICTRANS is performing slightly better than the NLLB model.
+And NLLB is doing better than ChatGPT. 
+While translating, I learnt that ChatGPT suffers here because it has more knowledge,
+and due to that, it often instead of translating directly, tries to answer some questions.
+Or it will add some more details from world knowledge to the answer which a basic translator wont know.
+Or it will try to get some connection between 2 sentences.
+This makes the translations slightly less accurate.
+
+So, if the goal is strictly translation, and that too for a large dataset. ChatGPT is not it.
+It falls off even if we give like 20-30 sentences at once.
